@@ -57,6 +57,7 @@ public class CreateRepositoryTest {
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath(CREATE_PROJECT_BUTTON_XPATH))).click();
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(PROJECT_CREATED_MESSAGE_XPATH)));
+        assert driver.findElement(By.xpath(PROJECT_CREATED_MESSAGE_XPATH)).getText().equals("Project was successfully created.");
     }
 
     @AfterEach
