@@ -5,7 +5,15 @@ import org.junit.platform.suite.api.Suite;
 @Suite
 @DisplayName("Ordered Test Suite for gitlab.com")
 @SelectClasses({
-        SignInTest.class,
+        EditProfileNavigationTest.class,
+        EditProfileSettingTest.class,
+        GenerateSSHKeyTest.class,
+        CreateRepositoryTest.class,
+        CreateTagTest.class,
+        CreateFileTest.class,
+        NewBranchCreationTest.class,
+//        CreateMergeRequest.class
+
 })
 class OrderedTestSuite {
 }
