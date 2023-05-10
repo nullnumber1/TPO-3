@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -71,5 +72,10 @@ public class RegisterTest {
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(GITLAB_GREETING_XPATH)));
         assert driver.findElement(By.xpath(GITLAB_GREETING_XPATH)).isDisplayed();
+    }
+
+    @AfterEach
+    public void tearDown() {
+        driver.quit();
     }
 }

@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -67,5 +68,10 @@ public class SignInTest {
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(GREETING_XPATH)));
         assert driver.findElement(By.xpath(GREETING_XPATH)).isDisplayed();
+    }
+
+    @AfterEach
+    public void tearDown() {
+        driver.quit();
     }
 }

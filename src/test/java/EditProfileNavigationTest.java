@@ -12,15 +12,15 @@ import util.CookieLoader;
 
 import java.time.Duration;
 
-public class SignOutTest {
+public class EditProfileNavigationTest {
     private WebDriver driver;
     private WebDriverWait wait;
 
     String userDataDir = "/Users/macbook/Library/Application\\ Support/Google/Chrome";
 
     private static final String USER_DROPDOWN_XPATH = "/html/body/header/div/div/div[3]/ul/li[6]/a";
-    private static final String SIGN_OUT_BUTTON_XPATH = "/html/body/header/div/div/div[3]/ul/li[6]/div/ul/li[16]/a";
-    private static final String FORM_CONTAINER_XPATH = "//*[@id=\"signin-container\"]";
+    private static final String EDIT_PROFILE_BUTTON_XPATH = "/html/body/header/div/div/div[3]/ul/li[6]/div/ul/li[4]/a";
+    private static final String EDIT_FIELD_DIV_XPATH = "/html/body/div[3]/div/div[3]/main/form";
 
     @BeforeEach
     public void setup() {
@@ -33,8 +33,8 @@ public class SignOutTest {
     }
 
     @Test
-    @DisplayName("Sign out test")
-    public void testSignOut() {
+    @DisplayName("Edit profile test")
+    public void testEditProfile() {
         driver.manage().window().maximize();
         driver.navigate().to("https://gitlab.com");
         CookieLoader.loadCookiesFromFile(driver, "src/test/resources/cookies/cookies.txt");
@@ -45,11 +45,11 @@ public class SignOutTest {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(USER_DROPDOWN_XPATH)));
         driver.findElement(By.xpath(USER_DROPDOWN_XPATH)).click();
 
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(SIGN_OUT_BUTTON_XPATH)));
-        driver.findElement(By.xpath(SIGN_OUT_BUTTON_XPATH)).click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(EDIT_PROFILE_BUTTON_XPATH)));
+        driver.findElement(By.xpath(EDIT_PROFILE_BUTTON_XPATH)).click();
 
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(FORM_CONTAINER_XPATH)));
-        assert driver.findElement(By.xpath(FORM_CONTAINER_XPATH)).isDisplayed();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(EDIT_FIELD_DIV_XPATH)));
+        assert driver.findElement(By.xpath(EDIT_FIELD_DIV_XPATH)).isDisplayed();
     }
 
     @AfterEach
