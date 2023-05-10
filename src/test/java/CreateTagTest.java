@@ -20,7 +20,6 @@ public class CreateTagTest {
 
     String userDataDir = "/Users/macbook/Library/Application\\ Support/Google/Chrome";
 
-    private static final String BLANK_PROJECT_XPATH = "//*[@id=\"content-body\"]/div[2]/div[2]/div[2]/div[1]/div[1]/a";
     private static final String PROJECT_NAME_XPATH = "//*[@id=\"content-body\"]/div[5]/ul/li/div[2]/div/div[1]/h2/a";
     private static final String PLUS_BUTTON_XPATH = "/html/body/div[3]/div/div[3]/main/div[4]/div/div[2]/div[1]/nav/ol/li[2]/div/button";
     private static final String NEW_TAG_XPATH = "/html/body/div[3]/div/div[3]/main/div[4]/div/div[2]/div[1]/nav/ol/li[2]/div/ul/div/div/li[8]/a";
