@@ -16,18 +16,16 @@ import java.time.Duration;
 import java.util.Scanner;
 
 public class SignInTest {
-    private WebDriver driver;
-    private WebDriverWait wait;
-    private Scanner scanner;
-
-    private File uBlockOrigin = new File("src/test/resources/1.49.2_0.crx");
-
     private static final String SIGN_IN_BUTTON_XPATH = "//*[@id=\"be-navigation-desktop\"]/div/div/div[2]/div/a";
     private static final String FORM_CONTAINER_XPATH = "//*[@id=\"signin-container\"]";
     private static final String USERNAME_INPUT_XPATH = "//*[@id=\"user_login\"]";
     private static final String PASSWORD_INPUT_XPATH = "//*[@id=\"user_password\"]";
     private static final String SIGN_IN_BUTTON_2_XPATH = "//*[@id=\"new_user\"]/div[4]/button";
     private static final String GREETING_XPATH = "//*[@id=\"content-body\"]/div[2]/div[1]/h2";
+    private WebDriver driver;
+    private WebDriverWait wait;
+    private Scanner scanner;
+    private File uBlockOrigin = new File("src/test/resources/1.49.2_0.crx");
 
     @BeforeEach
     public void setup() {

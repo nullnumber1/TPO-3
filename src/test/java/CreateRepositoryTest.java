@@ -14,17 +14,15 @@ import java.io.IOException;
 import java.time.Duration;
 
 public class CreateRepositoryTest {
-    private WebDriver driver;
-    private WebDriverWait wait;
-
-    String userDataDir = "/Users/macbook/Library/Application\\ Support/Google/Chrome";
-
     private static final String CREATE_REPOSITORY_XPATH = "//*[@id=\"content-body\"]/div[2]/div[2]/a[1]";
     private static final String BLANK_PROJECT_XPATH = "//*[@id=\"content-body\"]/div[2]/div[2]/div[2]/div[1]/div[1]/a";
     private static final String PROJECT_NAME_XPATH = "//*[@id=\"project_name\"]";
     private static final String PUBLIC_PROJECT_RADIO_BUTTON_XPATH = "//*[@id=\"new_project\"]/div[6]/div/div[2]/label";
     private static final String CREATE_PROJECT_BUTTON_XPATH = "//*[@id=\"new_project\"]/button";
     private static final String PROJECT_CREATED_MESSAGE_XPATH = "//*[@id=\"content-body\"]/div[1]/div/div/div";
+    String userDataDir = "/Users/macbook/Library/Application\\ Support/Google/Chrome";
+    private WebDriver driver;
+    private WebDriverWait wait;
 
     @BeforeEach
     public void setup() {

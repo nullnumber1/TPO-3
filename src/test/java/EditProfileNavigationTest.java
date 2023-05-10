@@ -13,14 +13,12 @@ import util.CookieLoader;
 import java.time.Duration;
 
 public class EditProfileNavigationTest {
-    private WebDriver driver;
-    private WebDriverWait wait;
-
-    String userDataDir = "/Users/macbook/Library/Application\\ Support/Google/Chrome";
-
     private static final String USER_DROPDOWN_XPATH = "/html/body/header/div/div/div[3]/ul/li[6]/a";
     private static final String EDIT_PROFILE_BUTTON_XPATH = "/html/body/header/div/div/div[3]/ul/li[6]/div/ul/li[4]/a";
     private static final String EDIT_FIELD_DIV_XPATH = "/html/body/div[3]/div/div[3]/main/form";
+    String userDataDir = "/Users/macbook/Library/Application\\ Support/Google/Chrome";
+    private WebDriver driver;
+    private WebDriverWait wait;
 
     @BeforeEach
     public void setup() {

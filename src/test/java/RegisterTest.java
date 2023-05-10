@@ -13,10 +13,6 @@ import java.time.Duration;
 import java.util.Scanner;
 
 public class RegisterTest {
-    private WebDriver driver;
-    private WebDriverWait wait;
-    private Scanner scanner;
-
     private static final String SIGN_IN_BUTTON_XPATH = "//*[@id=\"be-navigation-desktop\"]/div/div/div[2]/div/a";
     private static final String REGISTER_LINK_XPATH = "//*[@id=\"signin-container\"]/p[2]/a";
     private static final String FORM_CONTAINER_XPATH = "/html/body/div[1]/div[2]/div/div[3]/div/div";
@@ -29,6 +25,9 @@ public class RegisterTest {
     private static final String REGISTER_BUTTON_XPATH = "//*[@id=\"new_new_user\"]/div[9]/button";
     private static final String VERIFCATION_CODE_INPUT_XPATH = "//*[@id=\"__BVID__10\"]";
     private static final String GITLAB_GREETING_XPATH = "//*[@id=\"content-body\"]/div[2]/div/div/h2";
+    private WebDriver driver;
+    private WebDriverWait wait;
+    private Scanner scanner;
 
     @BeforeEach
     public void setup() {

@@ -13,14 +13,12 @@ import util.CookieLoader;
 import java.time.Duration;
 
 public class SignOutTest {
-    private WebDriver driver;
-    private WebDriverWait wait;
-
-    String userDataDir = "/Users/macbook/Library/Application\\ Support/Google/Chrome";
-
     private static final String USER_DROPDOWN_XPATH = "/html/body/header/div/div/div[3]/ul/li[6]/a";
     private static final String SIGN_OUT_BUTTON_XPATH = "/html/body/header/div/div/div[3]/ul/li[6]/div/ul/li[16]/a";
     private static final String FORM_CONTAINER_XPATH = "//*[@id=\"signin-container\"]";
+    String userDataDir = "/Users/macbook/Library/Application\\ Support/Google/Chrome";
+    private WebDriver driver;
+    private WebDriverWait wait;
 
     @BeforeEach
     public void setup() {

@@ -16,11 +16,6 @@ import java.time.Duration;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class EditProfileSettingTest {
-    private WebDriver driver;
-    private WebDriverWait wait;
-
-    String userDataDir = "/Users/macbook/Library/Application\\ Support/Google/Chrome";
-
     private static final String USER_DROPDOWN_XPATH = "/html/body/header/div/div/div[3]/ul/li[6]/a";
     private static final String EDIT_PROFILE_BUTTON_XPATH = "/html/body/header/div/div/div[3]/ul/li[6]/div/ul/li[4]/a";
     private static final String EDIT_FIELD_DIV_XPATH = "/html/body/div[3]/div/div[3]/main/form";
@@ -28,6 +23,9 @@ public class EditProfileSettingTest {
     private static final String PROFILE_NAME_XPATH = "/html/body/header/div/div/div[3]/ul/li[6]/div/ul/li[1]/a/div";
     private static final String SAVE_CHANGES_BUTTON_XPATH = "/html/body/div[3]/div/div[3]/main/form/div[5]/div/button";
     private static final String PROFILE_UPDATED_MESSAGE_XPATH = "//*[@id=\"content-body\"]/div[1]/div/div/div";
+    String userDataDir = "/Users/macbook/Library/Application\\ Support/Google/Chrome";
+    private WebDriver driver;
+    private WebDriverWait wait;
 
     @BeforeEach
     public void setup() {

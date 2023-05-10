@@ -15,11 +15,6 @@ import java.time.Duration;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CreateTagTest {
-    private WebDriver driver;
-    private WebDriverWait wait;
-
-    String userDataDir = "/Users/macbook/Library/Application\\ Support/Google/Chrome";
-
     private static final String PROJECT_NAME_XPATH = "//*[@id=\"content-body\"]/div[5]/ul/li/div[2]/div/div[1]/h2/a";
     private static final String PLUS_BUTTON_XPATH = "/html/body/div[3]/div/div[3]/main/div[4]/div/div[2]/div[1]/nav/ol/li[2]/div/button";
     private static final String NEW_TAG_XPATH = "/html/body/div[3]/div/div[3]/main/div[4]/div/div[2]/div[1]/nav/ol/li[2]/div/ul/div/div/li[8]/a";
@@ -27,6 +22,9 @@ public class CreateTagTest {
     private static final String TAG_MESSAGE_INPUT_XPATH = "//*[@id=\"message\"]";
     private static final String CREATE_TAG_BUTTON_XPATH = "//*[@id=\"new-tag-form\"]/div[4]/button";
     private static final String CREATED_TAG_MESSAGE_XPATH = "//*[@id=\"content-body\"]/div[2]/pre";
+    String userDataDir = "/Users/macbook/Library/Application\\ Support/Google/Chrome";
+    private WebDriver driver;
+    private WebDriverWait wait;
 
     @BeforeEach
     public void setup() {

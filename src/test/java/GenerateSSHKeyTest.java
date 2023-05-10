@@ -19,11 +19,6 @@ import java.time.Duration;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class GenerateSSHKeyTest {
-    private WebDriver driver;
-    private WebDriverWait wait;
-
-    String userDataDir = "/Users/macbook/Library/Application\\ Support/Google/Chrome";
-
     private static final String USER_DROPDOWN_XPATH = "/html/body/header/div/div/div[3]/ul/li[6]/a";
     private static final String PREFERENCES_BUTTON_XPATH = "/html/body/header/div/div/div[3]/ul/li[6]/div/ul/li[5]/a";
     private static final String SSHKEYS_BUTTON_XPATH = "/html/body/div[3]/aside/div/ul/li[11]/a/span[2]";
@@ -31,6 +26,9 @@ public class GenerateSSHKeyTest {
     private static final String SSH_KEY_TITLE_INPUT_XPATH = "//*[@id=\"key_title\"]";
     private static final String SSH_KEY_ADD_XPATH = "//*[@id=\"new_key\"]/div[6]/button";
     private static final String CARD_WITH_SSH_KEY = "//*[@id=\"content-body\"]/div[3]/div[1]/div";
+    String userDataDir = "/Users/macbook/Library/Application\\ Support/Google/Chrome";
+    private WebDriver driver;
+    private WebDriverWait wait;
 
     @BeforeEach
     public void setup() {

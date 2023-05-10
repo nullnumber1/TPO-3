@@ -18,11 +18,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CreateFileTest {
 
-    private WebDriver driver;
-    private WebDriverWait wait;
-
-    String userDataDir = "/Users/macbook/Library/Application\\ Support/Google/Chrome";
-
     private static final String PROJECT_NAME_XPATH = "//*[@id=\"content-body\"]/div[5]/ul/li/div[2]/div/div[1]/h2/a";
     private static final String PLUS_BUTTON_XPATH = "/html/body/div[3]/div/div[3]/main/div[4]/div/div[2]/div[1]/nav/ol/li[2]/div/button";
     private static final String NEW_FILE_XPATH = "/html/body/div[3]/div/div[3]/main/div[4]/div/div[2]/div[1]/nav/ol/li[2]/div/ul/div/div/li[2]/a";
@@ -30,6 +25,9 @@ public class CreateFileTest {
     private static final String COMMIT_MESSAGE_INPUT_XPATH = "/html/body/div[3]/div/div[3]/main/div[2]/form/div[2]/div/textarea";
     private static final String COMMIT_BUTTON_XPATH = "//*[@id=\"commit-changes\"]";
     private static final String FILE_CREATED_MESSAGE_XPATH = "//*[@id=\"content-body\"]/div[1]/div/div/div";
+    String userDataDir = "/Users/macbook/Library/Application\\ Support/Google/Chrome";
+    private WebDriver driver;
+    private WebDriverWait wait;
 
     @BeforeEach
     public void setup() {

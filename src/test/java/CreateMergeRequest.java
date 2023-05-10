@@ -15,17 +15,15 @@ import java.time.Duration;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class CreateMergeRequest {
-    private WebDriver driver;
-    private WebDriverWait wait;
-
-    String userDataDir = "/Users/macbook/Library/Application\\ Support/Google/Chrome";
-
     private static final String CREATE_MR_BUTTON_XPATH = "//*[@id=\"content-body\"]/div[2]/div/div[2]/a";
     private static final String MR_TITLE_XPATH = "//*[@id=\"merge_request_title\"]";
     private static final String MR_DESCRIPTION_XPATH = "//*[@id=\"merge_request_description\"]";
     private static final String ASIGNEE_XPATH = "//*[@id=\"new_merge_request\"]/div[5]/div/div[1]/div/a";
     private static final String CREATE_MR_BUTTON = "//*[@id=\"new_merge_request\"]/div[7]/button";
     private static final String MR_OVERVIEW_XPATH = "//*[@id=\"content-body\"]/div[2]/div[2]/div[1]";
+    String userDataDir = "/Users/macbook/Library/Application\\ Support/Google/Chrome";
+    private WebDriver driver;
+    private WebDriverWait wait;
 
     @BeforeEach
     public void setup() {
